@@ -1,0 +1,41 @@
+
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>Calculator</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                    First number
+                </td>
+                <td>
+                    <input type="text" name="textfirstnumber">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Second number
+                </td>
+                <td>
+                    <input type="text" name="textsecondnumber">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" name="buttonadd">add</button>
+                    <button type="submit" name="buttonsub">sub</button>
+                    <button type="submit" name="buttonmul">mul</button>
+                    <button type="submit" name="buttondiv">div</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        {{result}}
+                </td>
+            </tr>
+            </table>
+        </form>
+        {% endblock %}
+    

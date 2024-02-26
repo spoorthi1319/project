@@ -1,0 +1,44 @@
+<html>
+    <h1>Salary</h1>
+    <form method="POST">
+        {% csrf_token %}
+<h2><b>Register Page</b></h2>
+<h5>Note:</h5>
+<h4>1.Company</h4>
+<h6>0-abc company, 1-facebook, 2-google</h6>
+<h4>2.Job</h4>
+<h6>0-Business manager, 1-Computer programmmer, 2-sales executive</h6>
+<h4>3.Degree</h4>
+<h6>0-bachulers, 1-master</h6>
+            <table>
+            <tr>
+                <td>Company</td>
+                <td>
+                    <input type="text" name="textcompany">
+                </td>
+            </tr>
+            <tr>
+                <td>Job</td>
+                <td>
+                    <input tye="text" name="textjob">
+                </td>
+            </tr>
+            <tr>
+                <td>Degree(0-bachulers and 1-master)</td>
+                <td>
+                    <input type="text" name="textdegree">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" name="buttonsubmit">Submit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    {{result}}
+                    </td>
+                </tr>
+            </table>
+        </form>
+</html>

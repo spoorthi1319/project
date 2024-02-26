@@ -1,0 +1,30 @@
+<html>
+
+    <h1>home</h1>
+    <form method="POST">
+        {%csrf_token%}
+        <table>
+            <tr>
+                <td>Area</td>
+                <td>
+                    <input type="text" name="textarea">
+                </td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>
+                    <input type="text" name="textprice">
+                </td>
+                <tr>
+                    <tr>
+                        <td>
+                            <button type="submit" name="buttonsubmit">Submit</button>
+                            </td>
+                            <td>
+                            {{result}}
+                            </td>
+                        </tr>
+
+        </table>
+    </form>
+</html>

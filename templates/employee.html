@@ -1,0 +1,28 @@
+<html>
+    <h1>employee</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Email ID</td>
+                <td>
+                    <input type="text" name="textemailid">
+                </td>
+                <tr>
+                <tr>
+                    <td>mobile number</td>
+                    <td>
+                        <input type="text" name="textmobileno">
+                    </td>
+                <tr>
+                <tr>
+                    <td>
+                    <button  type="submit" name="buttonsubmit">Submit</button>
+                            </td>
+                            <td>
+                                {{result}}
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </html>

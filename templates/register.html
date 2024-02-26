@@ -1,0 +1,33 @@
+<html>
+
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>hello</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>first name</td>
+                <td> 
+                    <input type="text" name="textfirstname">
+                </td>
+            </tr>
+            <tr>
+                <td>last name</td>
+                <td> 
+                    <input type="text" name="textlastname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" name="buttonsubmit">submit</button>
+                </td>
+                <td>
+                    {{result}}
+                </td>
+            </tr>
+            <table>
+                <form>
+
+                    {% endblock %}
