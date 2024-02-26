@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <h1 style="color:red;border:orange;border-width:5px;border-style:outset"><center><b>Network Intrusion Detector</h1></b></center>
+
+
+   <body style="background-color:#89CFF0;" text="black">
+
+    <form method="POST">
+        {% csrf_token %}
+        <center>
+        <table>
+            <tr>
+                <td>Port Number</td>
+                <td>
+                    <input type="text" name="textportnumber">
+                </td>
+            </tr>
+            <tr>
+                <td>Received packets</td>
+                <td>
+                    <input type="text" name="textreceivedpackets">
+                </td>
+            </tr>
+            <tr>
+                <td>Received Bytes</td>
+                <td>
+                    <input type="text" name="textreceivedbytes">
+                </td>
+            </tr>
+            <tr>
+                <td>Sent Bytes</td>
+                <td>
+                    <input type="text" name="textsentbytes">
+                </td>
+            </tr>
+            <tr>
+                <td>Sent Packets</td>
+                <td>
+                    <input type="text" name="textsentpackets">
+                </td>
+            </tr>
+            <tr>
+                <td>Port alive Duration</td>
+                <td>
+                    <input type="text" name="textportaliveduration">
+                </td>
+            </tr>
+            <tr>
+                <td>Packets Rx Dropped</td>
+                <td>
+                    <input type="text" name="textpacketrxdropped">
+                </td>
+            </tr>
+            <tr>
+                <td>Packets Tx Dropped</td>
+                <td>
+                    <input type="text" name="textpacketstxdropped">
+                </td>
+            </tr>
+            <tr>
+                <td>Packets Rx Errors</td>
+                <td>
+                    <input type="text" name="textpacketsrxerrors">
+                </td>
+            </tr>
+            <tr>
+                <td>Packets Tx Errors</td>
+                <td>
+                    <input type="text" name="textpacketstxerrors">
+                </td>
+            </tr>
+            <tr>
+                <td>Delta Received Packets</td>
+                <td>
+                    <input type="text" name="textdeltareceivedpackets">
+                </td>
+            </tr>
+            <tr>
+                <td>Delta Received Bytes</td>
+                <td>
+                    <input type="text" name="textdeltareceivedbytes">
+                </td>
+            </tr>
+            <tr>
+                <td>Delta sent Bytes</td>
+                <td>
+                    <input type="text" name="textdeltasentbytes">
+                </td>
+            </tr>
+            <tr>
+                <td>Delta sent Packets</td>
+                <td>
+                    <input type="text" name="textdeltasentpackets">
+                </td>
+            </tr>
+            <tr>
+                <td>Delta Port alive Duration(S)</td>
+                <td>
+                    <input type="text" name="textdeltaportaliveduration">
+                </td>
+            </tr>
+            <tr>
+                <td>Delta Packets Rx Dropped</td>
+                <td>
+                    <input type="text" name="textdeltapacketsrxdropped">
+                </td>
+            </tr>
+            <tr>
+                <td>Delta Packets Tx Dropped</td>
+                <td>
+                    <input type="text" name="textdeltapacketstxdropped">
+                </td>
+            </tr>
+            <tr>
+                <td>Delta Packets Rx errors</td>
+                <td>
+                    <input type="text" name="textdeltapacketsrxerrors">
+                </td>
+            </tr>
+            <tr>
+                <td>Delta Packets Tx errors</td>
+                <td>
+                    <input type="text" name="textdeltapacketstxerrors">
+                </td>
+            </tr>
+            <tr>
+                <td>Connection points</td>
+                <td>
+                    <input type="text" name="textconnectionpoints">
+                </td>
+            </tr>
+            <tr>
+                <td>Total Load/Rate</td>
+                <td>
+                    <input type="text" name="textloadr">
+                </td>
+            </tr>
+            <tr>
+                <td>Total Load/Latest</td>
+                <td>
+                    <input type="text" name="textloadl">
+                </td>
+            </tr>
+            <tr>
+                <td>Unkown Load/Rate</td>
+                <td>
+                    <input type="text" name="textUnknownload">
+                </td>
+            </tr>
+            <tr>
+                <td>Unknown Load/Latest</td>
+                <td>
+                    <input type="text" name="textunknownlatest">
+                </td>
+            </tr>
+            <tr>
+                <td>Latest Bytes Counter</td>
+                <td>
+                    <input type="text" name="textlatestbytecounter">
+                </td>
+            </tr>
+            <tr>
+                <td>is_valid</td>
+                <td>
+                    <input type="text" name="textisvalid">
+                </td>
+            </tr>
+            <tr>
+                <td>Table ID</td>
+                <td>
+                    <input type="text" name="texttableid">
+                </td>
+            </tr>
+            <tr>
+                <td>Active Flow Entries</td>
+                <td>
+                    <input type="text" name="textactiveflowentries">
+                </td>
+            </tr>
+            <tr>
+                <td>Packets Looked Up</td>
+                <td>
+                    <input type="text" name="textpacketslookedup">
+                </td>
+            </tr>
+            <tr>
+                <td>Packets Matched</td>
+                <td>
+                    <input type="text" name="textpacketsmatched">
+                </td>
+            </tr>
+            <tr>
+                <td>Maximum Size</td>
+                <td>
+                    <input type="text" name="textmaximumsize">
+                </td>
+            </tr>
+            <tr><center>
+                <td>
+                    <button type="submit"  style="background-color:pink;color:white;width:150px;height:40px;" name="buttonsubmit">Predict</button>
+                </td>
+            </tr>
+            <tr><center>
+                <td>
+                    {{result}}
+                </td>
+            </tr></center>
+            
+        </table>
+        <footer>
+            <p>&copy;Spoorthi C K||1HK21CS160||@Karunadu Technologies||HKBK College of Engineering</p> 
+    </form>
+</center>
+</body>
+</html>
